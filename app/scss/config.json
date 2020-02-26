@@ -9,7 +9,9 @@
     "select": true
   },
   "fragments": {},
-  "lames": {},
+  "lames": {
+    "lame-header": true
+  },
   "pages": {
     "index": true
   }
