@@ -1,12 +1,13 @@
 // Font sizes
 $global-font: 20px;
-$global-font-family: 'Open Sans', sans-serif;
+$global-font-family: "Roboto";
+$global-font-family-titles: "Playfair Display";
 
 // Titles
-$h1-font-size: 34px;
-$h2-font-size: 32px;
-$h3-font-size: 24px;
-$h4-font-size: 22px;
+$h1-font-size: 64px;
+$h2-font-size: 36px;
+$h3-font-size: 20px;
+$h4-font-size: 16px;
 $h5-font-size: 12px;
 $h6-font-size: 10px;
 
@@ -17,20 +18,18 @@ $input-min-height: 50px;
 // Colors
 $colors: (
   // Custom colors, add here :
-  primary:     #713611,
-  secondary:   #f8c93e,
-
-  // Default colors do not remove :
-  white:       #fff,
-  black:       #000,
+    primary: #cf9455,
+  // secondary: #f8c93e,
+    // Default colors do not remove :
+    white: #fff,
+  black: #000,
   transparent: transparent,
-  error:       red,
-  success:     green,
+  error: red,
+  success: green
 );
 
-
 // Media queries
-$phone: 'screen and (max-width: 768px)';
-$tablet: 'screen and (max-width: 992px)';
-$tablet_large: 'screen and (max-width: 1024px)';
-$desktop: 'screen and (min-width: 1024px)';
+$phone: "screen and (max-width: 768px)";
+$tablet: "screen and (max-width: 992px)";
+$tablet_large: "screen and (max-width: 1024px)";
+$desktop: "screen and (min-width: 1024px)";

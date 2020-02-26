@@ -1,0 +1,21 @@
+<section class="lame lame-carousel owl-carousel">
+  {% for item in items %}
+  <div class="lame-carousel__item" style="background-image: url('{{item.bg}}');">
+    <div class="container">
+      <div class="lame-carousel__item__inner">
+        <h1 class="lame-carousel__item__inner__title">
+          {{item.title}}
+        </h1>
+        <p class="lame-carousel__item__inner__text">
+          {{item.text}}
+        </p>
+        <div class="lame-carousel__item__inner__button">
+          <button class="{{item.classButton}}">
+            {{item.textButton}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%  endfor  %}
+</section>
