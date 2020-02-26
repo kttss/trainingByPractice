@@ -1,0 +1,7 @@
+.primary {
+    color: map-get($colors, primary);
+}
+
+.bg-primary {
+    background-color: map-get($colors, primary);
+}
