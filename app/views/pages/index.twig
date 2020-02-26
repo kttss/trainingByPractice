@@ -1,9 +1,35 @@
 {% extends "../layout/skeleton.twig" %}
 {% block title %}
-Hello World 
+Hello World
 {% endblock %}
 {% block main %}
+
+{% include "../lames/lame-carousel.twig" with {
+  items:[
+  {
+    bg:"../assets/imgs/law.jpg",
+    title:"We fight for the compensation you deserve",
+    text:"Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    classButton:"btn btn-primary",
+    textButton:"Contact us now",
+  },
+  {
+    bg:"../assets/imgs/law.jpg",
+    title:"We fight for the compensation you deserve",
+    text:"Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    classButton:"btn btn-primary",
+    textButton:"Contact us now",
+  },
+  {
+    bg:"../assets/imgs/law.jpg",
+    title:"We fight for the compensation you deserve",
+    text:"Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    classButton:"btn btn-primary",
+    textButton:"Contact us now",
+  },
+  ]
+} %}
 <div class="container">
-    {% include './../lames/lame-image-content.twig' %}
+  {% include './../lames/lame-image-content.twig' %}
 </div>
 {% endblock %}

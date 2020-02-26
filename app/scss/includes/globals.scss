@@ -1,8 +1,20 @@
 // Global Styles
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
-article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
   display: block;
 }
 .test {
@@ -41,13 +53,30 @@ h1,
 h3,
 h4,
 h5 {
-  @include font($global-font-family, map-get($colors, black), false, false, false, false, false);
+  @include font(
+    $global-font-family-titles,
+    map-get($colors, black),
+    false,
+    false,
+    false,
+    false,
+    false
+  );
 }
 h1 {
   font-size: $h1-font-size;
 }
 h2 {
-  @include font($global-font-family, map-get($colors, black), $h2-font-size, false, false, bold, false, false);
+  @include font(
+    $global-font-family-titles,
+    map-get($colors, black),
+    $h2-font-size,
+    false,
+    false,
+    bold,
+    false,
+    false
+  );
   padding: 0 0 2rem;
   text-align: center;
 }
@@ -56,6 +85,7 @@ h3 {
 }
 h4 {
   font-size: $h4-font-size;
+  font-family: $global-font-family;
 }
 h5 {
   font-size: $h5-font-size;
@@ -63,7 +93,14 @@ h5 {
 h6 {
   font-size: $h6-font-size;
 }
-h1, h2, h3, h4, h5, h6, p, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
   margin: 0;
 }
 // Fonts
@@ -72,14 +109,25 @@ li,
 a,
 input,
 span {
-  @include font($global-font-family, map-get($colors, black), $global-font, false, false, false, false, false);
+  @include font(
+    $global-font-family,
+    map-get($colors, black),
+    $global-font,
+    false,
+    false,
+    false,
+    false,
+    false
+  );
 }
 
 p {
   margin-bottom: 15px;
 }
 // Lists
-dl, ol, ul {
+dl,
+ol,
+ul {
   margin-top: 0;
   margin-bottom: 0;
 }

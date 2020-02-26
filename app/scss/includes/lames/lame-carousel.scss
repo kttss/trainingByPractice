@@ -1,0 +1,30 @@
+.lame-carousel {
+  &__item {
+    min-height: 80vh;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    // background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__inner {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      // background: red;
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+      &__title {
+        color: map-get($colors, white);
+        line-height: 65px;
+        margin-bottom: 30px;
+      }
+      &__text {
+        color: map-get($colors, white);
+        max-width: 80%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

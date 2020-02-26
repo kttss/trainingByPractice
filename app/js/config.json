@@ -3,7 +3,8 @@
   "ready": true,
   "fragments": {
     "test": true,
-    "test2": true
+    "test2": true,
+    "carousels": true
   },
   "namespace": "SCP"
 }

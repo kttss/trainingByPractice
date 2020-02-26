@@ -1,7 +1,41 @@
 .primary {
-    color: map-get($colors, primary);
+  color: map-get($colors, primary);
+}
+.bg-primary {
+  background-color: map-get($colors, primary);
 }
 
-.bg-primary {
-    background-color: map-get($colors, primary);
+.black {
+  color: map-get($colors, black);
+}
+.bg-black {
+  background-color: map-get($colors, black);
+}
+
+.white {
+  color: map-get($colors, white);
+}
+.bg-white {
+  background-color: map-get($colors, white);
+}
+
+.transparent {
+  color: map-get($colors, transparent);
+}
+.bg-transparent {
+  background-color: map-get($colors, transparent);
+}
+
+.error {
+  color: map-get($colors, error);
+}
+.bg-error {
+  background-color: map-get($colors, error);
+}
+
+.success {
+  color: map-get($colors, success);
+}
+.bg-success {
+  background-color: map-get($colors, success);
 }

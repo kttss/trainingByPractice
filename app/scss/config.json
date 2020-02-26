@@ -12,7 +12,8 @@
     "block-about-us": true
   },
   "lames": {
-    "lame-image-content": true
+    "lame-image-content": true,
+    "lame-carousel": true
   },
   "pages": {
     "index": true
