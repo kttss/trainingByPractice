@@ -4,21 +4,39 @@
     width: 100%;
     height: auto;
     background-position: center;
-    // background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     &__inner {
       position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
+      top: 60%;
+      transform: translate(0, -60%);
       // background: red;
       display: flex;
       flex-direction: column;
-      max-width: 50%;
+      max-width: 44%;
+      &__tiretText {
+        color: map-get($colors, white);
+        margin-bottom: 30px;
+        position: relative;
+        text-transform: uppercase;
+
+        &::before {
+          position: absolute;
+          width: 45px;
+          height: 3px;
+          background-color: map-get($colors, white);
+          content: "";
+          left: -20px;
+          top: 50%;
+          transform: translate(-50px, -50%);
+        }
+      }
+
       &__title {
         color: map-get($colors, white);
         line-height: 65px;
         margin-bottom: 30px;
+        font-weight: 400;
       }
       &__text {
         color: map-get($colors, white);
