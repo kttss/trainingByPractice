@@ -15,7 +15,8 @@
     "lame-reasons-hire": true,
     "lame-timeline": true,
     "lame-meet-our-legal": true,
-    "lame-statistics": true
+    "lame-statistics": true,
+    "lame-header": true
   },
   "fragments": {
     "block-about-us": true,
