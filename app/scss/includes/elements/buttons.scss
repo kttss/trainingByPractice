@@ -53,4 +53,15 @@
       border-color: map-get($colors, transparent);
     }
   }
+  &-link {
+    background-color: transparent;
+    color: map-get($colors, primary);
+    border: 0;
+    &:hover {
+
+      background-color: transparent;
+      color: map-get($colors, primary);
+
+    }
+  }
 }
