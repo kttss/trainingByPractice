@@ -1,0 +1,172 @@
+.lame-timeline {
+  padding: 50px 0;
+  position: relative;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      display: flex;
+      margin-top: 40px;
+      &__image {
+        margin-right: 30px;
+        min-height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+      &__content {
+        max-width: 50%;
+        &__title {
+          text-align: left;
+          font-size: 46px;
+          line-height: 56px;
+          color: map-get($colors, black-1);
+          font-weight: 400;
+        }
+        &__text {
+          font-size: 16px;
+          line-height: 30px;
+          color: map-get($colors, black-2);
+          font-weight: 400;
+          margin-bottom: 35px;
+          max-width: 80%;
+        }
+      }
+    }
+    &.owl-carousel {
+      .owl-nav {
+        .owl-prev,
+        .owl-next {
+          position: absolute;
+          top: -50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px 5px !important;
+          border: 1px solid map-get($colors, primary);
+
+          &.disabled {
+            border-color: map-get($colors, grey);
+            span {
+              &::before {
+                color: map-get($colors, grey);
+              }
+            }
+          }
+          span {
+            &::before {
+              color: map-get($colors, primary);
+            }
+          }
+        }
+        .owl-prev {
+          left: 0;
+        }
+        .owl-next {
+          right: 0;
+        }
+      }
+      .owl-dots {
+        position: absolute;
+        top: -35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 50%;
+        width: 60%;
+        transform: translate(-50%, 0);
+        &::after {
+          content: "";
+          background-color: map-get($colors, grey);
+          position: absolute;
+          width: 156%;
+          height: 5px;
+          content: "";
+          left: -28%;
+          z-index: -1;
+        }
+        &::before {
+          content: "";
+          background-color: map-get($colors, primary);
+          position: absolute;
+          width: 28%;
+          height: 5px;
+          content: "";
+          left: -28%;
+          z-index: 0;
+        }
+        .owl-dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          border: 2px solid map-get($colors, grey);
+          background-color: map-get($colors, white);
+          &.active {
+            border: 2px solid map-get($colors, primary);
+            background-color: map-get($colors, primary);
+
+            &::before {
+              color: map-get($colors, primary) !important;
+            }
+          }
+
+          &:first-of-type {
+            position: relative;
+            &:before {
+              position: absolute;
+              content: "2001";
+              left: -50%;
+              top: -100%;
+              transform: translate(-26%, -100%);
+              font-size: 14px;
+              color: map-get($colors, black-2);
+              font-family: $global-font-family-titles;
+            }
+          }
+
+          &:nth-of-type(2) {
+            position: relative;
+            &:before {
+              position: absolute;
+              content: "2002";
+              left: -50%;
+              top: -100%;
+              transform: translate(-26%, -100%);
+              font-size: 14px;
+              color: map-get($colors, black-2);
+              font-family: $global-font-family-titles;
+            }
+          }
+          &:nth-of-type(3) {
+            position: relative;
+            &:before {
+              position: absolute;
+              content: "2003";
+              left: -50%;
+              top: -100%;
+              transform: translate(-26%, -100%);
+              font-size: 14px;
+              color: map-get($colors, black-2);
+              font-family: $global-font-family-titles;
+            }
+          }
+
+          &:nth-of-type(4) {
+            position: relative;
+            &:before {
+              position: absolute;
+              content: "2004";
+              left: -50%;
+              top: -100%;
+              transform: translate(-26%, -100%);
+              font-size: 14px;
+              color: map-get($colors, black-2);
+              font-family: $global-font-family-titles;
+            }
+          }
+        }
+      }
+    }
+  }
+}

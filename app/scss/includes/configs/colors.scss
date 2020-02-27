@@ -39,3 +39,31 @@
 .bg-success {
   background-color: map-get($colors, success);
 }
+
+.black-1 {
+  color: map-get($colors, black-1);
+}
+.bg-black-1 {
+  background-color: map-get($colors, black-1);
+}
+
+.black-2 {
+  color: map-get($colors, black-2);
+}
+.bg-black-2 {
+  background-color: map-get($colors, black-2);
+}
+
+.grey {
+  color: map-get($colors, grey);
+}
+.bg-grey {
+  background-color: map-get($colors, grey);
+}
+
+.grey-1 {
+  color: map-get($colors, grey-1);
+}
+.bg-grey-1 {
+  background-color: map-get($colors, grey-1);
+}

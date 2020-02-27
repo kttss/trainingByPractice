@@ -10,7 +10,6 @@
       position: absolute;
       top: 60%;
       transform: translate(0, -60%);
-      // background: red;
       display: flex;
       flex-direction: column;
       max-width: 44%;
@@ -82,13 +81,14 @@
             margin: 0 10px;
           }
           &::before {
-            content: "Next";
+            content: "Prev";
             position: absolute;
             display: flex;
             justify-content: center;
             align-items: center;
             right: 20px;
             font-weight: bold;
+            transition: width 0.5s ease-out;
           }
         }
       }

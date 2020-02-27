@@ -9,11 +9,17 @@
     "select": true
   },
   "fragments": {
-    "block-about-us": true
+    "block-about-us": true,
+    "block-numerote": true,
+    "block-card": true
   },
   "lames": {
     "lame-image-content": true,
-    "lame-carousel": true
+    "lame-carousel": true,
+    "lame-reasons-hire": true,
+    "lame-timeline": true,
+    "lame-meet-our-legal": true,
+    "lame-statistics": true
   },
   "pages": {
     "index": true

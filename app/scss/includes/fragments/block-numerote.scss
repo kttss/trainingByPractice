@@ -1,0 +1,29 @@
+.block-numerote {
+  max-width: 32%;
+  display: flex;
+  flex-direction: column;
+  &__number {
+    color: map-get($colors, primary);
+    font-size: 68px;
+    font-family: $global-font-family-titles;
+    font-weight: bold;
+    letter-spacing: 7px;
+    line-height: 70px;
+    margin-bottom: 15px;
+  }
+  &__title {
+    font-family: $global-font-family;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: map-get($colors, black-1);
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 28px;
+    color: map-get($colors, black-2);
+    font-family: "Roboto";
+    font-weight: 400;
+  }
+}

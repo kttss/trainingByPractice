@@ -1,0 +1,19 @@
+<section class="lame lame-reasons-hire">
+  <div class="container">
+    <h3 class="lame-reasons-hire__subtitle">
+      {{subtitle}}
+    </h3>
+    <h2 class="lame-reasons-hire__title">
+      {{title}}
+    </h2>
+    <div class="lame-reasons-hire__content">
+      {% for item in items %}
+      {% include "../fragments/block-numerote.twig" with {
+          number:item.number,
+          title:item.title,
+          text:item.text,
+        } %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

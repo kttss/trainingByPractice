@@ -31,7 +31,87 @@ Hello World
   },
   ]
 } %}
-<div class="container">
-  {% include './../lames/lame-image-content.twig' %}
-</div>
+{% include '../lames/lame-image-content.twig' %}
+
+{% include "../lames/lame-reasons-hire.twig" with {
+  subtitle:"Why choose hicks & hynson",
+  title:"3 Reasons to Hire Us",
+  items:[
+  {
+    number:"01.",
+    title:"Experienced",
+    text:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content"
+  },
+  {
+    number:"02.",
+    title:"Focused on you",
+    text:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content"
+  },
+  {
+    number:"03.",
+    title:"Reputation",
+    text:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content"
+  },
+  ]
+} %}
+
+{% include "../lames/lame-timeline.twig" with {
+  items: [
+  {
+    img:"../assets/imgs/equipe.jpg",
+    title:"Derive meals that anger pleasure to would of a",
+    text:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content",
+    btnclasses:"btn btn-secondary",
+    btntext:"Read Full Story"
+  },
+  {
+    img:"../assets/imgs/equipe.jpg",
+    title:"Derive meals that anger pleasure to would of a",
+    text:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content",
+    btnclasses:"btn btn-secondary",
+    btntext:"Read Full Story"
+  },
+  {
+    img:"../assets/imgs/equipe.jpg",
+    title:"Derive meals that anger pleasure to would of a",
+    text:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content",
+    btnclasses:"btn btn-secondary",
+    btntext:"Read Full Story"
+  },
+  {
+    img:"../assets/imgs/equipe.jpg",
+    title:"Derive meals that anger pleasure to would of a",
+    text:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content",
+    btnclasses:"btn btn-secondary",
+    btntext:"Read Full Story"
+  }
+  ]
+} %}
+
+
+{% include "../lames/lame-meet-our-legal.twig" with {
+  title:"Meet Our Legal Team",
+  subtitle:"To learn more about our Chicago personal injury attorneys, please follow the links below",
+  items:[
+  {
+    img:"../assets/imgs/card-image.jpg",
+    title:"Devil Roy Barman",
+    text:"Managing Partner",
+  },
+  {
+    img:"../assets/imgs/card-image.jpg",
+    title:"Devil Roy Barman",
+    text:"Managing Partner",
+  },{
+    img:"../assets/imgs/card-image.jpg",
+    title:"Devil Roy Barman",
+    text:"Managing Partner",
+  },{
+    img:"../assets/imgs/card-image.jpg",
+    title:"Devil Roy Barman",
+    text:"Managing Partner",
+  },
+  ]
+} %}
+
 {% endblock %}

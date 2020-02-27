@@ -3,6 +3,6 @@
  * */
 SCP.test = {
 	init: function () {
-			console.log('here')
+		console.log('here');
 	}
 };

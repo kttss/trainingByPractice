@@ -111,7 +111,7 @@ input,
 span {
   @include font(
     $global-font-family,
-    map-get($colors, black),
+    map-get($colors, black-2),
     $global-font,
     false,
     false,

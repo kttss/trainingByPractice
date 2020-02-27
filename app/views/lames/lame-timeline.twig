@@ -1,0 +1,22 @@
+<section class="lame lame-timeline">
+  <div class="container">
+    <div class="lame-timeline__inner owl-carousel">
+      {% for item in items %}
+      <div class="lame-timeline__inner__item">
+        <div class="lame-timeline__inner__item__image">
+          <img src="{{item.img}}" title="{{item.img}}" alt="{{item.img}}">
+        </div>
+        <div class="lame-timeline__inner__item__content">
+          <h2 class="lame-timeline__inner__item__content__title">
+            {{item.title}}
+          </h2>
+          <p class="lame-timeline__inner__item__content__text">
+            {{item.text}}
+          </p>
+          <button class="{{item.btnclasses}}">{{item.btntext}}</button>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

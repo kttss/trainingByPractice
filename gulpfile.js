@@ -78,9 +78,9 @@ gulp.task('fonts', function () {
 
 gulp.task('sync-fonts', function (done) {
   plugins.syncy(fonts.src + '/!**/!*.{ttf,otf,eot,svg,woff,woff2}', fonts.dest, {
-    verbose: true,
-    base: appRoot + '/fonts'
-  })
+      verbose: true,
+      base: appRoot + '/fonts'
+    })
     .then(function () {
       done();
     })
@@ -105,9 +105,9 @@ gulp.task('imgmin', function () {
 
 gulp.task('sync-imgs', function (done) {
   plugins.syncy(imgs.src + '/**/*.{jpg,jpeg,png,gif,ico,svg}', imgs.dest, {
-    verbose: true,
-    base: appRoot + '/imgs'
-  })
+      verbose: true,
+      base: appRoot + '/imgs'
+    })
     .then(function () {
       done();
     })
@@ -128,8 +128,12 @@ gulp.task('scss', function () {
     .pipe(plugins.stripCssComments())
     .pipe(gulp.dest(css.dest))
     .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.cleanCss({compatibility: 'ie8'}))
-    .pipe(plugins.rename({suffix: ".min"}))
+    .pipe(plugins.cleanCss({
+      compatibility: 'ie8'
+    }))
+    .pipe(plugins.rename({
+      suffix: ".min"
+    }))
     .pipe(gulp.dest(css.dest))
     .pipe(plugins.browserSync.stream());
 });
@@ -139,9 +143,13 @@ gulp.task('csslibs', function () {
     .pipe(plugins.sass().on('error', plugins.sass.logError))
     .pipe(plugins.stripCssComments())
     .pipe(plugins.sourcemaps.init())
-    .pipe(plugins.cleanCss({compatibility: 'ie8'}))
+    .pipe(plugins.cleanCss({
+      compatibility: 'ie8'
+    }))
     .pipe(plugins.concat("libs.css"))
-    .pipe(plugins.rename({suffix: ".min"}))
+    .pipe(plugins.rename({
+      suffix: ".min"
+    }))
     .pipe(gulp.dest(css.dest + '/vendor'))
     .pipe(plugins.browserSync.stream());
 });
@@ -149,7 +157,9 @@ gulp.task('csslibs', function () {
 gulp.task('scss-lint', function () {
   return gulp.src([css.src + '/*.scss', css.src + '/includes/**/*.scss'])
     .pipe(plugins.sassLint({
-      options: {formatter: 'stylish'},
+      options: {
+        formatter: 'stylish'
+      },
       configFile: '.sass-lint.yml'
     }))
     .pipe(plugins.sassLint.format())
@@ -158,9 +168,9 @@ gulp.task('scss-lint', function () {
 
 gulp.task('sync-css', function (done) {
   plugins.syncy([css.src + '/vendor/*.css'], css.dest + '/vendor', {
-    verbose: true,
-    base: appRoot + '/scss/vendor'
-  })
+      verbose: true,
+      base: appRoot + '/scss/vendor'
+    })
     .then(function () {
       done();
     })
@@ -176,9 +186,11 @@ gulp.task('jshint', function () {
     .pipe(plugins.plumber())
     .pipe(plugins.newer(js.dest + '/*.js'))
     .pipe(plugins.jshint())
-    .pipe(plugins.jshint.reporter('jshint-stylish', {beep: true}))
+    .pipe(plugins.jshint.reporter('jshint-stylish', {
+      beep: true
+    }))
     .pipe(plugins.concat('main.js'))
-    .pipe(plugins.stripDebug()) // Removing logs from js files
+    // .pipe(plugins.stripDebug()) // Removing logs from js files
     .pipe(plugins.stripComments()) // Removing comments from JS files
     .pipe(gulp.dest(js.dest))
     .pipe(plugins.uglify())
@@ -211,11 +223,10 @@ gulp.task('views-w-translate', function () {
     .pipe(plugins.browserSync.stream())
     .pipe(
       plugins.translation({
-          locale: locales.src + '*/**.json',
-          prefix: '\\[',
-          suffix: ']'
-        }
-      )
+        locale: locales.src + '*/**.json',
+        prefix: '\\[',
+        suffix: ']'
+      })
     )
     .pipe(gulp.dest(views.dest));
 });
@@ -242,8 +253,7 @@ gulp.task('generate', function (cb) {
 
     fillSCSSContainer(options.element, 'elements');
 
-  }
-  else if (options.fragment && typeof options.fragment === "string") { // Generating fragment
+  } else if (options.fragment && typeof options.fragment === "string") { // Generating fragment
     plugins.file(options.fragment + '.scss', '.' + options.fragment + '\t{\n\n}')
       .pipe(gulp.dest(css.src + '/includes/fragments'));
 
@@ -251,8 +261,7 @@ gulp.task('generate', function (cb) {
       .pipe(gulp.dest(views.src + '/fragments'));
 
     fillSCSSContainer(options.fragment, 'fragments');
-  }
-  else if (options.lame && typeof options.lame === "string") { // Generating lame
+  } else if (options.lame && typeof options.lame === "string") { // Generating lame
     plugins.file(options.lame + '.scss', '.' + options.lame + '\t{\n\n}')
       .pipe(gulp.dest(css.src + '/includes/lames'));
 
@@ -261,8 +270,7 @@ gulp.task('generate', function (cb) {
 
     fillSCSSContainer(options.lame, 'lames');
 
-  }
-  else if (options.page && typeof options.page === "string") { // Generating page
+  } else if (options.page && typeof options.page === "string") { // Generating page
     content = '{% extends "../layout/skeleton.twig" %}\n' +
       '{% block title %}\n' +
       options.page + '\n' +
@@ -275,28 +283,24 @@ gulp.task('generate', function (cb) {
       .pipe(gulp.dest(views.tpls));
 
     fillSCSSContainer(options.page, 'pages');
-  }
-  else if (options.layout && typeof options.layout === "string") { // Generating layout
+  } else if (options.layout && typeof options.layout === "string") { // Generating layout
     plugins.file(options.layout + '.twig', '')
       .pipe(gulp.dest(views.src + '/layout'));
-  }
-  else if (options.javascript && typeof options.javascript === "string") { // Generating js
+  } else if (options.javascript && typeof options.javascript === "string") { // Generating js
 
-// Append file to config.json
+    // Append file to config.json
     plugins.fs.readFile(configJSFile, 'utf8', function (err, data) {
       var config = JSON.parse(data);
       if (err) {
         throw new Error('File error');
-      }
-      else {
+      } else {
 
         config.fragments[options.javascript] = true;
 
         plugins.fs.writeFile(configJSFile, JSON.stringify(config, null, 2), function (err) {
           if (err) {
             throw new Error('Cant write file')
-          }
-          else {
+          } else {
             console.log("Config written successfully");
             createMainJS(config);
           }
@@ -307,7 +311,7 @@ gulp.task('generate', function (cb) {
 });
 
 function createFragmentJS(config) {
-// Creation of custom fragments JS
+  // Creation of custom fragments JS
   for (var i = 0; i < Object.keys(config.fragments).length; i++) {
     const name = Object.keys(config.fragments)[i];
 
@@ -360,37 +364,33 @@ function createMainJS(config) {
 
     content.push(scripts);
     content.push("});\n");
-  }
-  else {
+  } else {
     content.push("});\n");
   }
 
   plugins.fs.writeFile(js.src + '/custom/script.js', content.join("\n\n"), function (err) {
     if (err) {
       throw new Error("Can't write to file");
-    }
-    else {
+    } else {
       console.log("Main JavaScript File generated successfully");
     }
   });
 }
 
 function fillSCSSContainer(type, label) {
-// Append file to config.json
+  // Append file to config.json
   plugins.fs.readFile(configSCSSFile, 'utf8', function (err, data) {
     var config = JSON.parse(data);
 
     if (err) {
       throw new Error('File error');
-    }
-    else {
+    } else {
       config[label][type] = true;
 
       plugins.fs.writeFile(configSCSSFile, JSON.stringify(config, null, 2), function (err) {
         if (err) {
           throw new Error('Cant write file');
-        }
-        else {
+        } else {
           console.log("Config written successfully");
           createSCSSContainer(config, label);
         }
@@ -416,8 +416,7 @@ function createSCSSContainer(config, label) {
       plugins.fs.writeFile(css.src + '/includes/' + label + '/_' + label + '.scss', typeArray.join("\n"), function (err) {
         if (err) {
           throw new Error("Can't write to file");
-        }
-        else {
+        } else {
           console.log("Script generated successfully");
         }
       });
@@ -428,8 +427,12 @@ function createSCSSContainer(config, label) {
 
 /* Clean before build */
 gulp.task('clean', function () {
-  gulp.src(distRoot + '/**', {read: false})
-    .pipe(plugins.clean({force: true}));
+  gulp.src(distRoot + '/**', {
+      read: false
+    })
+    .pipe(plugins.clean({
+      force: true
+    }));
 });
 
 
@@ -471,8 +474,7 @@ gulp.task('compile-views', function () {
       plugins.runSequence(
         'views-w-translate'
       );
-    }
-    else {
+    } else {
       plugins.runSequence(
         'views'
       );
@@ -495,10 +497,10 @@ gulp.task('build', function () {
 gulp.task('init', function () {
   gulp.src('./package.json')
     .pipe(plugins.prompt.prompt([{
-      type: 'input',
-      name: 'name',
-      message: 'Project name : '
-    },
+        type: 'input',
+        name: 'name',
+        message: 'Project name : '
+      },
       {
         type: 'input',
         name: 'description',
@@ -512,7 +514,8 @@ gulp.task('init', function () {
         type: 'input',
         name: 'translate',
         message: 'Do you want to enable translations?[y/n] '
-      }], function (res) {
+      }
+    ], function (res) {
 
       saveInit(res.name, res.description, res.namespace, res.translate);
     }));
@@ -531,22 +534,20 @@ function saveInit(pName, pDesc, pNamespace, pTranslate) {
     return;
   });
 
-// Init config SCSS File
+  // Init config SCSS File
   plugins.fs.readFile(configSCSSFile, 'utf8', function (err, data) {
     var config = JSON.parse(data);
 
     if (err) {
       throw new Error('File error');
-    }
-    else {
+    } else {
       config.fragments = {};
       config.lames = {};
 
       plugins.fs.writeFile(configSCSSFile, JSON.stringify(config, null, 2), function (err) {
         if (err) {
           throw new Error('Cant write file');
-        }
-        else {
+        } else {
           console.log("SCSS Init successfully");
           createSCSSContainer(config, "lames");
           createSCSSContainer(config, "fragments");
@@ -555,22 +556,20 @@ function saveInit(pName, pDesc, pNamespace, pTranslate) {
     }
   });
 
-// Init config JS File
+  // Init config JS File
   plugins.fs.readFile(configJSFile, 'utf8', function (err, data) {
     var config = JSON.parse(data);
 
     if (err) {
       throw new Error('File error');
-    }
-    else {
+    } else {
       config.namespace = pNamespace;
       config.fragments = {};
 
       plugins.fs.writeFile(configJSFile, JSON.stringify(config, null, 2), function (err) {
         if (err) {
           throw new Error('Cant write file');
-        }
-        else {
+        } else {
           console.log("JS Init successfully");
           createMainJS(config);
         }
@@ -578,29 +577,27 @@ function saveInit(pName, pDesc, pNamespace, pTranslate) {
     }
   });
 
-// Init config PACKAGE JSON File
+  // Init config PACKAGE JSON File
   plugins.fs.readFile(packageJson, 'utf8', function (err, data) {
     var config = JSON.parse(data);
 
     if (err) {
       throw new Error('File error');
-    }
-    else {
+    } else {
       config.name = pName;
       config.description = pDesc;
 
       plugins.fs.writeFile(packageJson, JSON.stringify(config, null, 2), function (err) {
         if (err) {
           throw new Error('Cant write file');
-        }
-        else {
+        } else {
           console.log("Init successfully");
         }
       });
     }
   });
 
-// If the user choose to enable translate option
+  // If the user choose to enable translate option
   if (pTranslate === "y" || pTranslate === "Y") {
     plugins.file('fr.json', '{\n\n}')
       .pipe(gulp.dest(locales.src));
@@ -623,14 +620,16 @@ gulp.task('initRemove', function () {
     css.src + "/includes/lames/*.scss",
     css.src + "/includes/fragments/*.scss",
     "!" + css.src + "/includes/lames/_lames.scss", // Exclude this file from
-// clean
+    // clean
     "!" + css.src + "/includes/fragments/_fragments.scss" // Exclude this file
-// from clean
-  ]).pipe(plugins.clean({force: true}));
+    // from clean
+  ]).pipe(plugins.clean({
+    force: true
+  }));
 });
 
 gulp.task('createIndex', function () {
-// Generate a new index under app/views/pages
+  // Generate a new index under app/views/pages
   var content = '{% extends "../layout/skeleton.twig" %}\n' +
     '{% block title %}\n' +
     'Hello World \n' +
@@ -645,19 +644,31 @@ gulp.task('createIndex', function () {
 
 /* Watch DOG */
 gulp.task('serve', ['build'], function () {
-// Static server & Autoreload
+  // Static server & Autoreload
   plugins.browserSync.init({
     server: {
       baseDir: distRoot
     }
   });
 
-  gulp.watch('**/*', {cwd: fonts.src}, ['compile-fonts']);
-  gulp.watch('**/*', {cwd: imgs.src}, ['compile-imgs']);
-  gulp.watch('**/*', {cwd: css.src}, ['compile-scss']);
-  gulp.watch('**/*', {cwd: js.src}, ['compile-scripts']);
-  gulp.watch('**/*', {cwd: views.src}, ['compile-views']);
-  gulp.watch('**/*', {cwd: locales.src}, ['compile-views']);
+  gulp.watch('**/*', {
+    cwd: fonts.src
+  }, ['compile-fonts']);
+  gulp.watch('**/*', {
+    cwd: imgs.src
+  }, ['compile-imgs']);
+  gulp.watch('**/*', {
+    cwd: css.src
+  }, ['compile-scss']);
+  gulp.watch('**/*', {
+    cwd: js.src
+  }, ['compile-scripts']);
+  gulp.watch('**/*', {
+    cwd: views.src
+  }, ['compile-views']);
+  gulp.watch('**/*', {
+    cwd: locales.src
+  }, ['compile-views']);
 });
 
 

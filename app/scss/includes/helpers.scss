@@ -39,3 +39,34 @@
     padding-top: 0;
   }
 }
+
+.before-dot {
+  border: 2px solid map-get($colors, primary) !important;
+  background-color: map-get($colors, primary) !important;
+  @include ease-in-out();
+
+  &:after {
+    background-color: map-get($colors, primary);
+    position: absolute;
+    width: 206px;
+    height: 5px;
+    content: "";
+    left: 10px;
+    z-index: 0;
+    top: 2px;
+  }
+}
+
+.last-before {
+  @include ease-in-out(width);
+  &:after {
+    background-color: map-get($colors, primary);
+    position: absolute;
+    width: 185px;
+    height: 5px;
+    content: "";
+    left: 10px;
+    z-index: 0;
+    top: 2px;
+  }
+}

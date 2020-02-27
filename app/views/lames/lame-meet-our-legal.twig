@@ -1,0 +1,19 @@
+<section class="lame lame-meet-our-legal">
+  <div class="container">
+    <h2 class="lame-meet-our-legal__title">
+      {{title}}
+    </h2>
+    <h3 class="lame-meet-our-legal__subtitle">
+      {{subtitle}}
+    </h3>
+    <div class="lame-meet-our-legal__content">
+      {% for item in items %}
+      {% include "../fragments/block-card.twig" with {
+          img:item.img,
+          title:item.title,
+          text:item.text
+      } %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
