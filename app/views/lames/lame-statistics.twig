@@ -1,3 +1,24 @@
 <section class="lame lame-statistics">
-lame-statistics
+  <div class="lame-statistics__content">
+    {% include "../fragments/block-elevated.twig" with {
+        img:img,
+        text:text,
+        btnClasses:btnClasses,
+        btnText:btnText
+      } %}
+    <div class="lame-statistics__content__right">
+      {% for item in items %}
+      <div class="lame-statistics__content__right__item">
+        <h2 class="lame-statistics__content__right__item__title">
+          {{item.title}}
+        </h2>
+        <h2 class="lame-statistics__content__right__item__subtitle">
+          {{item.subtitle}}
+        </h2>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
 </section>

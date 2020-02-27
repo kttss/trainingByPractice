@@ -8,6 +8,13 @@
     "radioboxes": true,
     "select": true
   },
+  "fragments": {
+    "block-about-us": true,
+    "block-numerote": true,
+    "block-card": true,
+    "block-elevated": true,
+    "block-expert-practice": true
+  },
   "lames": {
     "lame-carousel": true,
     "lame-image-content": true,
@@ -17,12 +24,6 @@
     "lame-meet-our-legal": true,
     "lame-statistics": true,
     "lame-header": true
-  },
-  "fragments": {
-    "block-about-us": true,
-    "block-expert-practice": true,
-    "block-numerote": true,
-    "block-card": true
   },
   "pages": {
     "index": true

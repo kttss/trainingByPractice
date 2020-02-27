@@ -1,0 +1,15 @@
+.block-elevated {
+  max-width: 50%;
+  background-color: map-get($colors, blue-dark);
+  position: absolute;
+  height: 450px;
+  width: 30%;
+  left: 10%;
+  top: 10%;
+  &__logo {
+    max-width: 10%;
+    img {
+      width: 100%;
+    }
+  }
+}

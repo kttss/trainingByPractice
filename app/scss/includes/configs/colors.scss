@@ -67,3 +67,10 @@
 .bg-grey-1 {
   background-color: map-get($colors, grey-1);
 }
+
+.blue-dark {
+  color: map-get($colors, blue-dark);
+}
+.bg-blue-dark {
+  background-color: map-get($colors, blue-dark);
+}
