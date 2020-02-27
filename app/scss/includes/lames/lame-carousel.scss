@@ -45,4 +45,78 @@
       }
     }
   }
+
+  // carousel configs
+  &.owl-carousel {
+    .owl-nav {
+      background-color: red;
+      .owl-prev,
+      .owl-next {
+        background-color: map-get($colors, white);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        color: map-get($colors, primary);
+        margin: 0 2%;
+        span {
+          color: map-get($colors, primary);
+        }
+      }
+
+      .owl-prev {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        &:hover {
+          width: 100px;
+          border-radius: 40px;
+          justify-content: flex-start;
+          padding: 0 20px;
+          @include ease-in-out(all);
+
+          span {
+            margin: 0 10px;
+          }
+          &::before {
+            content: "Next";
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            right: 20px;
+            font-weight: bold;
+          }
+        }
+      }
+      .owl-next {
+        position: absolute;
+        right: 0;
+        top: 50%;
+
+        &:hover {
+          width: 100px;
+          border-radius: 40px;
+          justify-content: flex-end;
+          @include ease-in-out(all);
+
+          span {
+            margin: 0 10px;
+          }
+          &::before {
+            content: "Next";
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            left: 20px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
 }
