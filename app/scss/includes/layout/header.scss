@@ -1,0 +1,117 @@
+.header{
+  position: absolute;
+  width: 93%;
+  z-index: 10;
+  text-align: center;
+  margin: auto 4%;
+  color: map-get($colors , white);
+  &_top{
+    &:after{
+      content: "";
+      border-bottom: 1px solid #fff;
+      width: 98%;
+      display: flex;
+      margin: auto;
+    }
+    &_ul {
+      list-style: none;
+      display: flex;
+      padding-top: 5px;
+      justify-content: space-between;
+      &_contact{
+        &_info{
+          color: map-get($colors , white);
+          &:nth-child(1){
+            &:after{
+              content: "";
+              margin: 40px;
+              border-right: 1px solid;
+            }
+          }
+          margin-right: 0;
+          font-size: 16px;
+          &_title{
+            font-weight: 600;
+            font-size: 16px;
+            color: map-get($colors , white);
+          }
+        }
+        &_social{
+          margin-right: 26px;
+          font-size: 18px;
+          color: map-get($colors , white);
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+      &:last-child{
+        padding-left: 0;
+        padding-right: 20px;
+        padding-bottom: 5px;
+      }
+    }
+  }
+  &_bottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    align-items: center;
+    padding-top: 5px;
+    &_logo{
+      &_h1{
+        color: map-get($colors , white);
+        font-size: 49px;
+      }
+    }
+    &_menu{
+      width: 70%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      &_parent{
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        &_child{
+          margin-right: 33px;
+          display: flex;
+          align-items: center;
+          &_span{
+            color: map-get($colors , white);
+            font-size: 14px;
+            margin-right: 5px;
+          }
+          &:last-child{
+            margin-right: 0;
+          }
+          &_icon{
+            font-size: 10px;
+            color: map-get($colors , primary);
+          }
+        }
+      }
+    }
+    &_contact{
+      display: flex;
+      width: 16%;
+      justify-content: center;
+      &_icon{
+        align-self: center;
+        font-size: 30px;
+      }
+      &_info{
+        &_h1{
+          color: map-get($colors , white);
+          font-size: 24px;
+          font-weight: bold;
+          font-family: "Roboto";
+        }
+        &_span{
+          color: map-get($colors , white);
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
