@@ -1,0 +1,16 @@
+<section class="lame lame-expert-practice">
+        <div class="container">
+                <div class="expert-practice-title">
+                        <h2>WHAT WE ARE EXPERT AT</h2>
+                        <h1>LegalPractice Areas</h1>
+                </div>
+                <div class="expert-items">
+                        {% for item in items %}
+                                {% include './../fragments/block-expert-practice.twig' with {
+                                        itme: item
+                                }  %}
+                        {%  endfor  %}
+                </div>
+        </div>
+
+</section>

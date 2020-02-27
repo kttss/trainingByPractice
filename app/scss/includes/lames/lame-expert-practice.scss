@@ -1,0 +1,19 @@
+.lame-expert-practice	{
+  background-color: #F5F5F5;
+padding: 20px 0;
+
+  .expert-practice-title{
+    text-align: center;
+    padding-bottom: 50px;
+    h1,h2{
+      padding: 0;
+      line-height: 1;
+    }
+  }
+  .expert-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+}
