@@ -34,7 +34,7 @@ Hello World
 {% include '../lames/lame-image-content.twig' %}
 
 
-  {% include './../lames/lame-expert-practice.twig' with {
+{% include './../lames/lame-expert-practice.twig' with {
     items:[
       {
         title:"WORKERS' COMPENSATION",
@@ -111,7 +111,7 @@ Hello World
 } %}
 
 {% include "../lames/lame-statistics.twig" with {
-  img:"../assets/imgs/logo.svg",
+  img:"../assets/imgs/logo.png",
   text:"Helping The Injured People & Get Your Desired Results Since 2000",
   btnClasses:"btn btn-primary",
   btnText:"Get Started With Your Case Today!",
@@ -193,6 +193,11 @@ Hello World
     text:"Managing Partner",
   },
   ]
+} %}
+
+{% include "../lames/lame-background-video.twig" with {
+  bgImage:"../assets/imgs/bg.jpg",
+  title:"Watch actual clients talk about our legal services"
 } %}
 
 

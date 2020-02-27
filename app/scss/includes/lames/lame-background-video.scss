@@ -1,0 +1,55 @@
+.lame-background-video {
+  padding: 50px;
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    &__title {
+      margin: 0 auto;
+      max-width: 40%;
+      font-size: 46px;
+      letter-spacing: 1px;
+      line-height: 65px;
+      color: map-get($colors, white);
+      font-weight: 700;
+      width: 35%;
+      font-family: $global-font-family-titles;
+      margin-top: 8%;
+    }
+    &__video {
+      max-width: 37%;
+      margin: 5% 82px 5% 33px;
+      border: 1px solid map-get($colors, white);
+      border-radius: 10px;
+      border: 5px solid map-get($colors, white);
+      max-height: 250px;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-image: url("/assets/imgs/play.png");
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .card {
+        border-radius: 5px;
+        max-height: 100%;
+        a {
+          max-height: 237px;
+          img {
+            max-height: 237px;
+          }
+        }
+      }
+    }
+  }
+}

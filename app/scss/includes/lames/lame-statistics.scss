@@ -1,8 +1,44 @@
 .lame-statistics {
   position: relative;
   background-color: map-get($colors, black-1);
-  margin-bottom: 100px;
+  margin-bottom: 180px;
   &__content {
     display: flex;
+    position: relative;
+    height: 482px;
+    &__right {
+      position: absolute;
+      left: 57%;
+      display: flex;
+      top: 55%;
+      transform: translate(0, -50%);
+      max-width: 30%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &__item {
+        width: 45%;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &__title {
+          font-size: 68px;
+          line-height: 64px;
+          color: map-get($colors, white);
+          font-weight: 700;
+          padding-bottom: 18px;
+          letter-spacing: 5px;
+        }
+        &__subtitle {
+          font-size: 18px;
+          line-height: 36px;
+          color: map-get($colors, white);
+          font-family: $global-font-family;
+          font-weight: 400;
+        }
+      }
+    }
   }
 }

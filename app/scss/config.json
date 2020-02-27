@@ -23,7 +23,8 @@
     "lame-timeline": true,
     "lame-meet-our-legal": true,
     "lame-statistics": true,
-    "lame-header": true
+    "lame-header": true,
+    "lame-background-video": true
   },
   "pages": {
     "index": true
