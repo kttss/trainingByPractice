@@ -1,16 +1,154 @@
-<header>
-  <div>
-    <ul>
-      <li><span>Email: </span>info@company.com</li>
-      <li><span>Fax: </span>312-641-9201</li>
-    </ul>
-  </div>
-  <div>
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-</header>
+{% include "../lames/lame-header.twig" with {
+  items:[
+    {
+      classHeader: "header_top",
+      itemChild1: [
+        {
+          classChild1: "header_top_ul",
+          childUl: true,
+          ul: [
+            {
+              classUl: "header_top_ul_contact header_top_ul",
+              span: true,
+              li: [
+                {
+                  classLi: "header_top_ul_contact_info",
+                  span: [
+                    {
+                      classSpan: "header_top_ul_contact_info_title",
+                      content: "Email: "
+                    },
+                    {
+                      classSpan: "header_top_ul_contact_info",
+                      content: "info@company.com"
+                    }
+                  ]
+                },
+                {
+                  classLi: "header_top_ul_contact_info",
+                  span: [
+                    {
+                      classSpan: "header_top_ul_contact_info_title",
+                      content: "Fax: "
+                    },
+                    {
+                      classSpan: "header_top_ul_contact_info",
+                      content: "312-641-9201"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              classUl: "header_top_ul_contact header_top_ul",
+              li: [
+                {
+                  classLi: "header_top_ul_contact_social",
+                  i: true,
+                  classIcon: "icon-twitter"
+                },
+                {
+                  classLi: "header_top_ul_contact_social",
+                  i: true,
+                  classIcon: "icon-facebook"
+                },
+                {
+                  classLi: "header_top_ul_contact_social",
+                  i: true,
+                  classIcon: "icon-linkedin"
+                },
+                {
+                  classLi: "header_top_ul_contact_social",
+                  i: true,
+                  classIcon: "icon-instagram"
+                },
+              ]
+            }
+          ]
+        },
+      ]
+    },
+    {
+      classHeader: "header_bottom",
+      itemChild1: [
+        {
+          classChild1: "header_bottom_logo",
+          existh1: true,
+          classH1: "header_bottom_logo_h1",
+          content: "Logo"
+        },
+        {
+          classChild1: "header_bottom_menu",
+          existUl: true,
+          ul: "header_bottom_menu_parent",
+          liItem: [
+            {
+              class: "header_bottom_menu_parent_child",
+              spanClass: "header_bottom_menu_parent_child_span",
+              content: "Home"
+            },
+            {
+              class: "header_bottom_menu_parent_child",
+              spanClass: "header_bottom_menu_parent_child_span",
+              content: "Profiles"
+            },
+            {
+              class: "header_bottom_menu_parent_child",
+              spanClass: "header_bottom_menu_parent_child_span",
+              content: "Practice Areas",
+              existI: true,
+              classI: "icon-down-arrow header_bottom_menu_parent_child_icon"
+            },
+            {
+              class: "header_bottom_menu_parent_child",
+              spanClass: "header_bottom_menu_parent_child_span",
+              content: "Results",
+              existI: true,
+              classI: "icon-down-arrow header_bottom_menu_parent_child_icon"
+            },
+            {
+              class: "header_bottom_menu_parent_child",
+              spanClass: "header_bottom_menu_parent_child_span",
+              content: "Testimonials",
+              existI: true,
+              classI: "icon-down-arrow header_bottom_menu_parent_child_icon"
+            },
+            {
+              class: "header_bottom_menu_parent_child",
+              spanClass: "header_bottom_menu_parent_child_span",
+              content: "Blog",
+              existI: true,
+              classI: "icon-down-arrow header_bottom_menu_parent_child_icon"
+            },
+            {
+              class: "header_bottom_menu_parent_child",
+              spanClass: "header_bottom_menu_parent_child_span",
+              content: "Contact Us",
+              existI: true,
+              classI: "icon-down-arrow header_bottom_menu_parent_child_icon"
+            },
+          ]
+        },
+        {
+          classChild1: "header_bottom_contact",
+          existDiv: true,
+          divItem: [
+            {
+              classDiv: "header_bottom_contact_icon",
+              existI: true,
+              classI: "icon-headset"
+            },
+            {
+              classDiv: "header_bottom_contact_info",
+              existOtherItem: true,
+              h1: "header_bottom_contact_info_h1",
+              contentH1: "312.641.9200",
+              span: "header_bottom_contact_info_span",
+              contentSpan: "Call Us For Free Consultation"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+} %}
