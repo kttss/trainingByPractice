@@ -55,6 +55,32 @@ Hello World
   ]
 } %}
 
+{% include "../lames/lame-statistics.twig" with {
+  img:"../assets/imgs/logo.svg",
+  text:"Helping The Injured People & Get Your Desired Results Since 2000",
+  btnClasses:"btn btn-primary",
+  btnText:"Get Started With Your Case Today!",
+  items:[
+  {
+    title:"95%",
+    subtitle:"Cases Won",
+  },
+  {
+    title:"899",
+    subtitle:"Trusted Client",
+  },
+  {
+    title:"165 +",
+    subtitle:"Dedicated Lawyer",
+  },
+  {
+    title:"25%",
+    subtitle:"Case Dismissed",
+  },
+  ]
+
+} %}
+
 {% include "../lames/lame-timeline.twig" with {
   items: [
   {

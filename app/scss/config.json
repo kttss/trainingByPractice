@@ -11,7 +11,8 @@
   "fragments": {
     "block-about-us": true,
     "block-numerote": true,
-    "block-card": true
+    "block-card": true,
+    "block-elevated": true
   },
   "lames": {
     "lame-image-content": true,
