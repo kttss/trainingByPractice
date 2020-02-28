@@ -146,10 +146,13 @@
 
 .displayItem{
   &.active{
+    span {
+      color: map-get($colors , primary);
+    }
     &:after {
       content: "";
       display: flex;
-      border-bottom: 4px solid #cf9455;
+      border-bottom: 4px solid map-get($colors , primary);
       margin-left: -3px;
     }
   }
