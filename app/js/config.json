@@ -4,7 +4,8 @@
   "fragments": {
     "test": true,
     "test2": true,
-    "carousels": true
+    "carousels": true,
+    "menu": true
   },
   "namespace": "SCP"
 }
