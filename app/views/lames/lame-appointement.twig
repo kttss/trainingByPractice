@@ -1,0 +1,41 @@
+<section class="lame lame-appointement container">
+  <div class="lame-appointement_consulting">
+    <h1 class="lame-appointement_consulting_title">{{ title }}</h1>
+    <h2 class="lame-appointement_consulting_subTitle">{{ subTitle }}</h2>
+    <p class="lame-appointement_consulting_content">
+      {{ content }}
+    </p>
+  </div>
+  <div class="lame-appointement_contact">
+    <div class="lame-appointement_contact_flex2">
+      {% include "../elements/input.twig" with {
+        style: "lame-appointement_contact_flex2_inputText",
+        placeholder: "Your Name"
+      } %}
+      {% include "../elements/input.twig" with {
+        style: "lame-appointement_contact_flex2_inputText",
+        placeholder: "Phone"
+      } %}
+    </div>
+    <div class="lame-appointement_contact_flex2">
+      {% include "../elements/input.twig" with {
+        style: "lame-appointement_contact_flex2_inputText",
+        placeholder: "Email"
+      } %}
+      {% include "../elements/input.twig" with {
+        style: "lame-appointement_contact_flex2_inputText",
+        placeholder: "Business law"
+      } %}
+    </div>
+    <div class="lame-appointement_contact_flex1">
+      <textarea class="lame-appointement_contact_flex1_description" placeholder="Case Description"></textarea>
+    </div>
+    <div class="lame-appointement_contact_flex1">
+      {% include "../elements/button.twig" with {
+        shape: "normal",
+        value: "Appointment",
+        type: "btn-primary"
+      } %}
+    </div>
+  </div>
+</section>

@@ -8,9 +8,9 @@
     }%}
 #}
 {% if shape == "normal" %}
-  <{{ tag }} class="btn {{ type }} {{ style }}">{{ value }}</{{ tag }}>
+  <button class="btn {{ type }} {{ style }}">{{ value }}</button>
 {% elseif shape == "circle" %}
-  <{{ tag }} class="btn {{ type }} {{ style }}">{{ value }} {{ icon }}</{{ tag }}>
+  <button class="btn {{ type }} {{ style }}">{{ value }} {{ icon }}</button>
 {% elseif submit == true %}
-  <{{ tag }} type="submit" class="btn-eq {{ type }} {{ style }}">{{ icon }}</{{ tag }}>
+  <button type="submit" class="btn-eq {{ type }} {{ style }}">{{ icon }}</button>
 {% endif %}

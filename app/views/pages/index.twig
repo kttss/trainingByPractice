@@ -33,7 +33,6 @@ Hello World
 } %}
 {% include '../lames/lame-image-content.twig' %}
 
-
 {% include './../lames/lame-expert-practice.twig' with {
     items:[
       {
@@ -199,6 +198,13 @@ Hello World
   bgImage:"../assets/imgs/bg.jpg",
   title:"Watch actual clients talk about our legal services"
 } %}
+
+{% include "../lames/lame-appointement.twig" with {
+  content: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less able English content of a page.",
+  subTitle: "Call us 24/7 at 312-641-9200 or fill out the form.",
+  title: "Free Consulting"
+} %}
+
 {% include "../lames/lame-testimonials.twig" with {
   title: "Testimonials",
   items: [
