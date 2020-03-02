@@ -18,7 +18,136 @@
     <main>
         {% block main %}{% endblock %}
     </main>
-    {% include 'footer.twig' %}
+    {% include 'footer.twig' with {
+      items: [
+        {
+          classNode: "footer_top",
+          itemTop: true,
+          footerTopItem: [
+            {
+              classCols: "footer_top_cols",
+              h1Class: "footer_top_cols_logo",
+              h1Content: "Logo",
+              hasDescription: true,
+              descriptionClass: "footer_top_cols_description",
+              descriptionContent: "The attorneys of The Horwitz Law Group in Chicago represent clients throughout Chicagoland and in Lombard, Naperville, Skokie, Evanston, Oak Park, Garfield Park, Elmhurst, Wheaton, Joliet, Lockport, Plainfield, Geneva, St. Charles, Arlington Heights, Niles, Des Plaines, Harvey, Homewood, Richton Park, Villa Park, Carol Stream, Morton Grove, Lincolnwood, Schaumburg, Hoffman Estates, Cook County, DuPage County, Will County and Kane County, Illinois."
+            },
+            {
+              classCols: "footer_top_cols",
+              h1Class: "footer_top_cols_title",
+              h1Content: "Practice Area",
+              hasLink: true,
+              itemLink: [
+                {
+                  classLink: "icon-fast-forward footer_top_cols_item_li",
+                  content: "Business Law"
+                },
+                {
+                  classLink: "icon-fast-forward footer_top_cols_item_li",
+                  content: "Family Law"
+                },
+                {
+                  classLink: "icon-fast-forward footer_top_cols_item_li",
+                  content: "Real Estate Law"
+                },
+                {
+                  classLink: "icon-fast-forward footer_top_cols_item_li",
+                  content: "Education Law"
+                },
+                {
+                  classLink: "icon-fast-forward footer_top_cols_item_li",
+                  content: "Criminal Law"
+                },
+              ]
+            },
+            {
+              classCols: "footer_top_cols",
+              h1Class: "footer_top_cols_title",
+              h1Content: "Quick Link",
+              hasLink: true,
+              itemLink: [
+                {
+                  classLink: "icon-fast-forward footer_top_cols_item_li",
+                  content: "Quick Link"
+                },
+                {
+                  classLink: "icon-fast-forward footer_top_cols_item_li",
+                  content: "About"
+                },
+                {
+                  classLink: "icon-fast-forward footer_top_cols_item_li",
+                  content: "Cases"
+                },
+                {
+                  classLink: "icon-fast-forward footer_top_cols_item_li",
+                  content: "Blog"
+                },
+                {
+                  classLink: "icon-fast-forward footer_top_cols_item_li",
+                  content: "Blog"
+                },
+              ]
+            },
+            {
+              classCols: "footer_top_cols",
+              h1Class: "footer_top_cols_title",
+              h1Content: "ELMHURST OFFICE",
+              hasContact: true,
+              itemLink: [
+                {
+                  classLink: "footer_top_cols_item_li",
+                  content: "20 N. Clark Street Suite 3300</br>Chicago, IL 60602 | USA"
+                },
+                {
+                  classLink: "footer_top_cols_item_li",
+                  content: "<strong>Phone: </strong>312-641-9200"
+                },
+                {
+                  classLink: "footer_top_cols_item_li",
+                  content: "<strong>Email: </strong>info@example.com"
+                },
+                {
+                  classLink: "footer_top_cols_item_li",
+                  content: "<strong>Fax: </strong>312-641-9201"
+                },
+              ]
+            },
+          ]
+        },
+        {
+          classNode: "footer_bottom",
+          itemBottom: true,
+          footerBottomItem: [
+            {
+              classChildNode: "footer_bottom_copyright",
+              noLink: true,
+              content: "© Copyright 2020 | Devdesign Studio | All right reserved."
+            },
+            {
+              classChildNode: "footer_bottom_icon",
+              hasLink: true,
+              boottomFooter: [
+                {
+                  classLi: "footer_bottom_icon_ul_li",
+                  classA: "footer_bottom_icon_ul_li_link",
+                  classi: "icon-twitter"
+                },
+                {
+                  classLi: "footer_bottom_icon_ul_li",
+                  classA: "footer_bottom_icon_ul_li_link",
+                  classi: "icon-facebook"
+                },
+                {
+                  classLi: "footer_bottom_icon_ul_li",
+                  classA: "footer_bottom_icon_ul_li_link",
+                  classi: "icon-linkedin"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    } %}
 
     <script src="assets/js/vendor/libs.js"></script>
     <script src="assets/js/main.min.js"></script>
