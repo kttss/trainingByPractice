@@ -250,5 +250,9 @@ Hello World
   ]
 } %}
 
-{% include "../lames/lame-newsletter.twig" %}
+{% include "../lames/lame-newsletter.twig" with {
+  title1: "Stay updated with news",
+  title2: "Subscribe to our Newsletter",
+  submitBtn: "Subscribe"
+} %}
 {% endblock %}
