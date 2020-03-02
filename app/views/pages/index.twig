@@ -199,5 +199,24 @@ Hello World
   bgImage:"../assets/imgs/bg.jpg",
   title:"Watch actual clients talk about our legal services"
 } %}
-{% include "../lames/lame-testimonials.twig"%}
+{% include "../lames/lame-testimonials.twig" with {
+  title: "Testimonials",
+  items: [
+    {
+      quote: "Denise Stevens was run over by a private waste hauling company while crossing the street at Howard and Western in Chicago. She sustained multiple fractures as well as a traumatic brain injury. She underwent multiple surgeries and a craniotomy to relieve her brain of the blood accumulation.",
+      titleName: "Devil Roy Barman",
+      subname: "RESULT: $4,500,000.00"
+    },
+    {
+      quote: "Denise Stevens was run over by a private waste hauling company while crossing the street at Howard and Western in Chicago. She sustained multiple fractures as well as a traumatic brain injury. She underwent multiple surgeries and a craniotomy to relieve her brain of the blood accumulation.",
+      titleName: "Devil Roy Barman",
+      subname: "RESULT: $4,500,000.00"
+    },
+    {
+      quote: "Denise Stevens was run over by a private waste hauling company while crossing the street at Howard and Western in Chicago. She sustained multiple fractures as well as a traumatic brain injury. She underwent multiple surgeries and a craniotomy to relieve her brain of the blood accumulation.",
+      titleName: "Devil Roy Barman",
+      subname: "RESULT: $4,500,000.00"
+    },
+  ]
+} %}
 {% endblock %}
