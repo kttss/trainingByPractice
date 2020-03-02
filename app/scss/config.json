@@ -24,7 +24,8 @@
     "lame-meet-our-legal": true,
     "lame-statistics": true,
     "lame-header": true,
-    "lame-background-video": true
+    "lame-background-video": true,
+    "lame-testimonials": true
   },
   "pages": {
     "index": true
