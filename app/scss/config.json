@@ -28,7 +28,8 @@
     "lame-background-video": true,
     "lame-testimonials": true,
     "lame-appointement": true,
-    "lame-blog": true
+    "lame-blog": true,
+    "lame-newsletter": true
   },
   "pages": {
     "index": true
