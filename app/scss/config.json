@@ -13,7 +13,8 @@
     "block-numerote": true,
     "block-card": true,
     "block-elevated": true,
-    "block-expert-practice": true
+    "block-expert-practice": true,
+    "block-card-blog": true
   },
   "lames": {
     "lame-carousel": true,
@@ -26,7 +27,8 @@
     "lame-header": true,
     "lame-background-video": true,
     "lame-testimonials": true,
-    "lame-appointement": true
+    "lame-appointement": true,
+    "lame-blog": true
   },
   "pages": {
     "index": true

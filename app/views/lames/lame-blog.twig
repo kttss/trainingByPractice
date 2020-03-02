@@ -1,0 +1,16 @@
+<section class="lame lame-blog">
+  <div class="container">
+    <h2 class="lame-blog_title">
+      {{title}}
+    </h2>
+    <div class="lame-blog_content">
+      {% for item in items %}
+      {% include "../fragments/block-card-blog.twig" with {
+          img:item.img,
+          title:item.title,
+          text:item.text
+      } %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
