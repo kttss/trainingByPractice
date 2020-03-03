@@ -17,11 +17,13 @@
   &_subscribe{
     display: flex;
     width: 50%;
+    height: 46px;
     &_inputEmail{
       background-color: map-get($colors, blue-dark2) !important;
       border: none !important;
       border-radius: 23px 0 0 23px;
       color: map-get($colors, white);
+      height: auto !important;
       &::placeholder{
         color: map-get($colors, white);
       }

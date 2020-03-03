@@ -148,3 +148,7 @@ a {
     line-height: 1.5;
   }
 }
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto map-get($colors, primary);
+}
