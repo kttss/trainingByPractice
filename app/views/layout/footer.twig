@@ -4,14 +4,21 @@
       {% if item.itemTop %}
         {% for topItem in item.footerTopItem %}
           <div class="{{ topItem.classCols }}">
-            <h1 class="{{ topItem.h1Class }}">{{ topItem.h1Content }}</h1>
+            {% if topItem.hasTitle %}
+              <h1 class="{{ topItem.h1Class }}">{{ topItem.h1Content }}</h1>
+            {% endif %}
+            {% if topItem.hasimg %}
+              <div class="{{ topItem.h1Class }}">
+                <img src="{{ topItem.h1Content }}" alt=""/>
+              </div>
+            {% endif %}
             {% if topItem.hasDescription %}
               <p class="{{ topItem.descriptionClass }}">{{ topItem.descriptionContent }}</p>
             {% endif %}
             {% if topItem.hasLink %}
             <ul class="footer_top_cols_item">
               {% for itemRow in topItem.itemLink %}
-                <li class="{{ itemRow.classLink }}"><a href="#">{{ itemRow.content }}</a></li>
+                <li class="{{ itemRow.classLink }}"><a href="#" class="footer_top_cols_item_li_a">{{ itemRow.content }}</a></li>
               {% endfor %}
             </ul>
             {% endif %}
