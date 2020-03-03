@@ -4,37 +4,56 @@
   flex-direction: column;
   background-color: map-get($colors, white);
   position: relative;
+  margin-right: 30px;
+  &:last-child{
+    margin-right: 0;
+  }
   &_date, &_title, &_text, &_readMore{
     text-align: left;
-    padding-left: 20px;
+    // padding-left: 20px;
   }
-  &_title, &_text{
-    margin-bottom: 20px;
-  }
-  &_date{
-    margin-top: 20px;
-    font-size: 14px;
-    font-weight: 400;
-  }
-  &_title {
-    color: map-get($colors, black-1);
-    font-family: $global-font-family;
-    font-weight: 500;
-  }
-  &_text {
+  &_text{
+    margin-bottom: 25px;
     font-size: 16px;
     color: map-get($colors, black-2);
     font-weight: 400;
     line-height: 26px;
   }
+  &_title{
+    margin-bottom: 16px;
+    color: map-get($colors, black-1);
+    font-family: $global-font-family;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  &_image{
+    margin-bottom: 15px;
+    img{
+      width: 100%;
+    }
+  }
+  &_date{
+    font-size: 14px;
+    font-weight: 400;
+  }
   &_readMore{
     font-size: 12px;
-    color: #cf9455;
+    color: map-get($colors, primary);
     font-weight: 700;
     display: flex;
     align-items: center;
+    opacity: 0.8;
+    text-transform: uppercase;
+    &:hover{
+      color: map-get($colors, primary);
+      .icon-next{
+        transition: .5s ease;
+        margin-left: 20px;
+      }
+    }
     &_icon{
       margin-left: 10px;
+      transition: .5s;
     }
   }
 }
