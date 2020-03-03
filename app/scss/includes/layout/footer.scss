@@ -4,13 +4,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding: 100px 0;
   &_top{
     display: flex;
     align-items: baseline;
     border-bottom: 1px solid map-get($colors, blue-dark);
+    padding-top: 100px;
     &_cols{
       flex: 0 0 20%;
+      margin-bottom: 64px;
       &:first-child{
         flex: 0 0 40%;
       }
@@ -28,6 +30,7 @@
       &_logo{
         font-size: 30px;
         color: map-get($colors, primary);
+        margin-bottom: 20px;
       }
       &_item{
         list-style: none;
@@ -65,7 +68,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 0;
+    margin: 48px 0;
     &_icon{
       &_ul{
         list-style: none;
@@ -85,7 +88,12 @@
             margin-right: 0;
           }
           &_link{
-            color: #fff;
+            color: map-get($colors, white) !important;
+            i{
+              &:hover {
+                color: #fff !important;
+              }
+            }
           }
         }
       }
