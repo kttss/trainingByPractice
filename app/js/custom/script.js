@@ -8,5 +8,6 @@ $(document).ready(function () {
 	SCP.test2.init();
 	SCP.carousels.init();
 	SCP.menu.init();
+	SCP.fancyBox.init();
 
 });

@@ -5,7 +5,8 @@
     "test": true,
     "test2": true,
     "carousels": true,
-    "menu": true
+    "menu": true,
+    "fancyBox": true
   },
   "namespace": "SCP"
 }

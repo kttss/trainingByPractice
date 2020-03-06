@@ -1,12 +1,12 @@
-.header{
+.header {
   position: absolute;
   width: 100%;
   z-index: 10;
   text-align: center;
-  color: map-get($colors , white);
-  &_top{
+  color: map-get($colors, white);
+  &_top {
     padding: 0;
-    &:after{
+    &:after {
       content: "";
       border-bottom: 1px solid #fff;
       width: 100%;
@@ -19,11 +19,11 @@
       padding-top: 5px;
       justify-content: space-between;
       padding-left: 0;
-      &_contact{
-        &_info{
-          color: map-get($colors , white);
-          &:nth-child(1){
-            &:after{
+      &_contact {
+        &_info {
+          color: map-get($colors, white);
+          &:nth-child(1) {
+            &:after {
               content: "";
               margin: 40px;
               border-right: 1px solid;
@@ -31,85 +31,85 @@
           }
           margin-right: 0;
           font-size: 16px;
-          &_title{
+          &_title {
             font-weight: 600;
             font-size: 16px;
-            color: map-get($colors , white);
+            color: map-get($colors, white);
           }
         }
-        &_social{
+        &_social {
           margin-right: 26px;
           font-size: 18px;
-          color: map-get($colors , white);
-          &:last-child{
+          color: map-get($colors, white);
+          &:last-child {
             margin-right: 0;
           }
         }
       }
-      &:last-child{
+      &:last-child {
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 5px;
       }
     }
   }
-  &_bottom{
+  &_bottom {
     display: flex;
     justify-content: space-between;
     padding: 0;
     align-items: center;
     padding-top: 5px;
-    &_logo{
-      &_h1{
-        color: map-get($colors , white);
+    &_logo {
+      &_h1 {
+        color: map-get($colors, white);
         font-size: 49px;
       }
     }
-    &_menu{
+    &_menu {
       width: 70%;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      &_parent{
+      &_parent {
         display: flex;
         list-style: none;
         justify-content: flex-end;
-        &_child{
+        &_child {
           margin-right: 33px;
           display: flex;
           align-items: center;
-          &_span{
-            color: map-get($colors , white);
+          &_span {
+            color: map-get($colors, white);
             font-size: 14px;
             margin-right: 5px;
           }
-          &:last-child{
+          &:last-child {
             margin-right: 0;
           }
-          &_icon{
+          &_icon {
             font-size: 10px;
-            color: map-get($colors , primary);
+            color: map-get($colors, primary);
           }
-          &_div{
+          &_div {
             opacity: 0;
             transition: opacity 0.4s ease-in-out;
             position: absolute;
             top: 85px;
-            background-color: map-get($colors , primary);
+            background-color: map-get($colors, primary);
             padding: 10px 0;
             margin-top: 10px;
             margin-left: 15px;
-            &_ul{
+            &_ul {
               list-style: none;
               padding: 0;
-              li{
-                color: map-get($colors , white);
+              li {
+                color: map-get($colors, white);
                 display: flex;
                 flex-direction: column;
                 border-bottom: 1px solid;
                 width: 100px;
                 padding-bottom: 5px;
-                &:last-child{
+                &:last-child {
                   border: none;
                   padding-bottom: 0;
                 }
@@ -119,23 +119,23 @@
         }
       }
     }
-    &_contact{
+    &_contact {
       display: flex;
       width: 18%;
       justify-content: center;
-      &_icon{
+      &_icon {
         align-self: center;
         font-size: 30px;
       }
-      &_info{
-        &_h1{
-          color: map-get($colors , white);
+      &_info {
+        &_h1 {
+          color: map-get($colors, white);
           font-size: 24px;
           font-weight: bold;
           font-family: "Roboto";
         }
-        &_span{
-          color: map-get($colors , white);
+        &_span {
+          color: map-get($colors, white);
           font-size: 12px;
         }
       }
@@ -143,19 +143,20 @@
   }
 }
 
-.displayItem{
-  &.active{
+.displayItem {
+  &.active {
     span {
-      color: map-get($colors , primary);
+      color: map-get($colors, primary);
     }
     &:after {
       content: "";
       display: flex;
-      border-bottom: 4px solid map-get($colors , primary);
+      border-bottom: 3px solid map-get($colors, primary);
       margin-left: -3px;
+      border-radius: 3px;
     }
   }
-  &:hover .header_bottom_menu_parent_child_div{
+  &:hover .header_bottom_menu_parent_child_div {
     transition: opacity 0.4s ease-in-out;
     opacity: 1;
   }

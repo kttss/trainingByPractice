@@ -1,30 +1,38 @@
-.block-expert-practice	{
-
+.block-expert-practice {
   min-width: 250px;
   width: 33%;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   text-align: center;
 
+  .block-expert-practice__icon {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    padding-bottom: 20px;
+    font-size: 46px;
+  }
 
-    .block-expert-practice__icon{
-      display: flex;
-      justify-content: center;
-      font-size: 50px;
-      padding-bottom: 20px;
-
-    }
-
-  h4{
+  h4 {
     font-weight: bold;
     margin-bottom: 20px;
+    color: map-get($colors, black-1);
+    line-height: 18px;
   }
-  p{
+  p {
     font-size: 16px;
-  }
-  .btn .icon{
-    color: map-get($colors, primary);
-    font-size: 14px;
+    min-height: 77px;
+    line-height: 28px;
   }
 
+  .btn {
+    &-link {
+      line-height: 15.6px;
+      text-transform: uppercase;
+    }
 
+    .icon {
+      color: map-get($colors, primary);
+      font-size: 13px;
+    }
+  }
 }

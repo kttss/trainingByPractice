@@ -12,6 +12,7 @@ SCP.carousels = {
 			items: 1,
 			nav: true,
 			navText: ["<span class='icon icon-back'></span>", "<span class='icon icon-next'></span>"],
+			dots: false
 		});
 
 		$carouselTimer.owlCarousel({

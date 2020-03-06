@@ -1,29 +1,43 @@
 .block-about-us {
-    padding: 20px;
+  display: flex;
+  margin: 30px 0;
+
+  .block-about-us__image {
+    box-shadow: -15px -15px 2px 0 #cf945533;
+    margin-right: 30px;
+    width: 40%;
+    height: auto;
+    max-height: 100%;
+  }
+
+  .block-about-us__content {
     display: flex;
+    flex-direction: column;
+    max-width: 40%;
 
-    .block-about-us__image {
-        width: 350px;
-        height: 300px;
-        box-shadow: -15px -15px 0 0 rgba(220, 229, 224, .8);
+    .block-about-content__title {
+      font-size: 36px;
+      line-height: 1;
+      margin-bottom: 10px;
+      color: map-get($colors, black-1);
+      font-weight: 700;
+      line-height: 48px;
     }
 
-    .block-about-us__content {
-        padding-left: 10px;
-
-        .block-about-content__title {
-            font-size: 36px;
-            line-height: 1;
-        }
-
-        p {
-            font-size: 16px;
-        }
-
-        .block-about-content__signature {
-            width: 120px;
-            height: 50px;
-        }
-
+    p {
+      font-size: 16px;
+      color: map-get($colors, black-2);
+      font-family: $global-font-family;
+      line-height: 30px;
     }
+    a.btn {
+      max-width: max-content;
+      width: auto;
+    }
+
+    .block-about-content__signature {
+      width: 120px;
+      height: 50px;
+    }
+  }
 }

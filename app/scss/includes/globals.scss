@@ -42,6 +42,13 @@ body {
 main {
   overflow: hidden;
 }
+
+// define container properties
+.container {
+  @media #{$desktop_large} {
+    max-width: 1440px;
+  }
+}
 // hr
 hr {
   &.border_line {
@@ -148,7 +155,8 @@ a {
     line-height: 1.5;
   }
 }
-button:focus, input {
+button:focus,
+input {
   outline: 1px dotted;
   outline: 5px auto map-get($colors, primary);
 }

@@ -8,16 +8,15 @@
     font-family: $global-font-family-titles;
     font-weight: bold;
     letter-spacing: 7px;
-    line-height: 70px;
-    margin-bottom: 15px;
+    line-height: 64px;
   }
   &__title {
     font-family: $global-font-family;
     font-size: 24px;
     font-weight: 500;
-    line-height: 50px;
     text-transform: uppercase;
     color: map-get($colors, black-1);
+    line-height: 78px;
   }
   &__text {
     font-size: 16px;
