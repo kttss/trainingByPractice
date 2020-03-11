@@ -7,17 +7,17 @@
   .block-expert-practice__icon {
     display: flex;
     justify-content: center;
-    font-size: 50px;
-    padding-bottom: 20px;
-    font-size: 46px;
+    padding-bottom: 25px;
+    font-size: 64px;
   }
 
   h4 {
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
     color: map-get($colors, black-1);
     line-height: 18px;
   }
+
   p {
     font-size: 16px;
     min-height: 77px;

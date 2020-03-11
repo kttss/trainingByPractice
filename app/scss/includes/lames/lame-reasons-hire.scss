@@ -1,5 +1,6 @@
 .lame-reasons-hire {
-  padding: 50px 0;
+  padding: 100px 0;
+
   &__title {
     color: map-get($colors, black-1);
     font-size: 46px;
@@ -7,6 +8,7 @@
     display: flex;
     justify-content: center;
   }
+
   &__subtitle {
     color: map-get($colors, black-1);
     font-family: $global-font-family;
@@ -15,6 +17,7 @@
     display: flex;
     justify-content: center;
   }
+
   &__content {
     display: flex;
     justify-content: space-between;

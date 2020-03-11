@@ -4,6 +4,7 @@
 ::before {
   box-sizing: border-box;
 }
+
 article,
 aside,
 dialog,
@@ -17,10 +18,12 @@ nav,
 section {
   display: block;
 }
+
 .test {
   border: 1px solid grey;
   padding: 15px;
 }
+
 html {
   font-family: sans-serif;
   line-height: 1.5;
@@ -29,6 +32,7 @@ html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
 }
+
 body {
   @extend .fw-regular;
   background-color: map-get($colors, white);
@@ -39,6 +43,7 @@ body {
   position: relative;
   text-align: left;
 }
+
 main {
   overflow: hidden;
 }
@@ -49,57 +54,62 @@ main {
     max-width: 1440px;
   }
 }
+
 // hr
 hr {
   &.border_line {
     border-top: 2px solid map-get($colors, black);
   }
 }
+
 // Titles
 h1,
 h3,
 h4,
 h5 {
-  @include font(
-    $global-font-family-titles,
+  @include font($global-font-family-titles,
     map-get($colors, black),
     false,
     false,
     false,
     false,
-    false
-  );
+    false);
 }
+
 h1 {
   font-size: $h1-font-size;
 }
+
 h2 {
-  @include font(
-    $global-font-family-titles,
+  @include font($global-font-family-titles,
     map-get($colors, black),
     $h2-font-size,
     false,
     false,
     bold,
     false,
-    false
-  );
+    false);
   padding: 0 0 2rem;
   text-align: center;
 }
+
 h3 {
   font-size: $h3-font-size;
 }
+
 h4 {
   font-size: $h4-font-size;
   font-family: $global-font-family;
 }
+
 h5 {
   font-size: $h5-font-size;
 }
+
 h6 {
   font-size: $h6-font-size;
 }
+
 h1,
 h2,
 h3,
@@ -110,27 +120,27 @@ p,
 span {
   margin: 0;
 }
+
 // Fonts
 p,
 li,
 a,
 input,
 span {
-  @include font(
-    $global-font-family,
+  @include font($global-font-family,
     map-get($colors, black-2),
     $global-font,
     false,
     false,
     false,
     false,
-    false
-  );
+    false);
 }
 
 p {
   margin-bottom: 15px;
 }
+
 // Lists
 dl,
 ol,
@@ -138,6 +148,7 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+
 // Links hover
 a {
   text-decoration: none;
@@ -148,13 +159,16 @@ a {
     text-decoration: none;
   }
 }
+
 // All lames shoud have a line height of 1.5
 [class*="lame-"] {
   line-height: 1.5;
+
   * {
     line-height: 1.5;
   }
 }
+
 button:focus,
 input {
   outline: 1px dotted;
