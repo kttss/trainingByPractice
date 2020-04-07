@@ -48,6 +48,6 @@
     "gulp-prompt": "^1.0.1",
     "gulp-translate": "^1.5.7",
     "gulp-translation": "^0.6.0",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.3"
   }
 }
